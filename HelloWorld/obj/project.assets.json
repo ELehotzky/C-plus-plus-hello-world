@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/erica/Projects/HelloWorld/HelloWorld/HelloWorld.csproj",
+      "projectUniqueName": "/Users/erica/Projects/C-plus-plus-hello-world/HelloWorld/HelloWorld.csproj",
       "projectName": "HelloWorld",
-      "projectPath": "/Users/erica/Projects/HelloWorld/HelloWorld/HelloWorld.csproj",
+      "projectPath": "/Users/erica/Projects/C-plus-plus-hello-world/HelloWorld/HelloWorld.csproj",
       "packagesPath": "/Users/erica/.nuget/packages/",
-      "outputPath": "/Users/erica/Projects/HelloWorld/HelloWorld/obj",
+      "outputPath": "/Users/erica/Projects/C-plus-plus-hello-world/HelloWorld/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

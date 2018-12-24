@@ -6,16 +6,20 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            string myValue;
-            string anotherValue;
+            string myValue = "1";
+            string anotherValue = "2";
 
-            myValue = "Value 1";
-            anotherValue = "Value 2";
-            Console.WriteLine(myValue);
-            Console.WriteLine(anotherValue);
+            int num1 = 1;
+            int num2 = 2;
+            int converted = 0;
 
-            anotherValue = myValue;
-            Console.WriteLine(anotherValue);
+            Console.WriteLine(num1.ToString() + num2.ToString());
+            Console.WriteLine(myValue + anotherValue);
+
+            converted = Convert.ToInt32("1");
+
+            Console.WriteLine(converted);
+
             Console.ReadLine();
         }
         static void WriteLine(string value)
