@@ -6,22 +6,26 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            string myValue = "1";
-            string anotherValue = "2";
+            int num1 = 0;
+            int num2 = 0;
+            int answer = 0;
 
-            int num1 = 1;
-            int num2 = 2;
-            int converted = 0;
+            Console.WriteLine("Enter a number: ");
+            string sNum1 = Console.ReadLine();
 
-            Console.WriteLine(num1.ToString() + num2.ToString());
-            Console.WriteLine(myValue + anotherValue);
+            Console.WriteLine("Enter another number: ");
+            string sNum2 = Console.ReadLine();
 
-            converted = Convert.ToInt32("1");
+            Int32.TryParse(sNum1, out num1);
+            Int32.TryParse(sNum2, out num2);
 
-            Console.WriteLine(converted);
+            answer = num1 + num2;
+
+            Console.WriteLine("The answer is: " + answer);
 
             Console.ReadLine();
         }
+
         static void WriteLine(string value)
         {
 
