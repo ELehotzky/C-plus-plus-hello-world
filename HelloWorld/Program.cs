@@ -6,29 +6,36 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            int num1 = 0;
-            int num2 = 0;
-            int answer = 0;
+            PetStruct dog;
+            dog.Type = "Dog";
+            dog.HasFur = true;
+            dog.Legs = 4;
 
-            Console.WriteLine("Enter a number: ");
-            string sNum1 = Console.ReadLine();
+            PetClass duck = new PetClass();
+            duck.Type = "Duck";
+            duck.HasFur = false;
+            duck.Legs = 2;
 
-            Console.WriteLine("Enter another number: ");
-            string sNum2 = Console.ReadLine();
-
-            Int32.TryParse(sNum1, out num1);
-            Int32.TryParse(sNum2, out num2);
-
-            answer = num1 + num2;
-
-            Console.WriteLine("The answer is: " + answer);
+            Console.Write("a " + dog.Type + " has " + dog.Legs + " legs");
+            Console.Write("a " + duck.Type + " has " + duck.Legs + " legs");
 
             Console.ReadLine();
         }
 
-        static void WriteLine(string value)
+        class PetClass
         {
+            public int Legs;
+            public string Type;
+            public string Name;
+            public bool HasFur;
+        }
 
+        struct PetStruct
+        {
+            public int Legs;
+            public string Type;
+            public string Name;
+            public bool HasFur;
         }
     }
 }
