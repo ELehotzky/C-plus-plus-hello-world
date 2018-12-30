@@ -7,12 +7,12 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             PetStruct dog;
-            dog.Type = "Dog";
+            dog.Type = PetType.Dog;
             dog.HasFur = true;
             dog.Legs = 4;
 
             PetClass duck = new PetClass();
-            duck.Type = "Duck";
+            duck.Type = PetType.Duck;
             duck.HasFur = false;
             duck.Legs = 2;
 
@@ -25,7 +25,7 @@ namespace HelloWorld
         class PetClass
         {
             public int Legs;
-            public string Type;
+            public PetType Type;
             public string Name;
             public bool HasFur;
         }
@@ -33,9 +33,15 @@ namespace HelloWorld
         struct PetStruct
         {
             public int Legs;
-            public string Type;
+            public PetType Type;
             public string Name;
             public bool HasFur;
+        }
+
+        enum PetType
+        {
+            Dog, 
+            Duck
         }
     }
 }
