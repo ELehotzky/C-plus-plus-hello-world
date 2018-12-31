@@ -4,9 +4,18 @@ namespace HelloWorld
 {
     class Program
     {
+        static void MultipleLegs(PetStruct petStruct, PetClass petClass)
+        {
+            petStruct.Legs = petStruct.Legs * 2;
+            petClass.Legs = petClass.Legs * 2;
+
+            Console.WriteLine("Internal Method - A " + petStruct.Type + " has " + petStruct.Legs + " legs.");
+            Console.WriteLine("Internal Method - A " + petClass.Type + " has " + petClass.Legs + " legs.");
+        }
+
         static void Main(string[] args)
         {
-            PetStruct dog;
+            PetStruct dog = new PetStruct();
             dog.Type = PetType.Dog;
             dog.HasFur = true;
             dog.Legs = 4;
@@ -16,8 +25,12 @@ namespace HelloWorld
             duck.HasFur = false;
             duck.Legs = 2;
 
-            Console.Write("a " + dog.Type + " has " + dog.Legs + " legs");
-            Console.Write("a " + duck.Type + " has " + duck.Legs + " legs");
+            Console.WriteLine("a " + dog.Type + " has " + dog.Legs + " legs");
+            Console.WriteLine("a " + duck.Type + " has " + duck.Legs + " legs");
+
+            MultipleLegs(dog, duck);
+            Console.WriteLine("a " + dog.Type + " has " + dog.Legs + " legs");
+            Console.WriteLine("a " + duck.Type + " has " + duck.Legs + " legs");
 
             Console.ReadLine();
         }
