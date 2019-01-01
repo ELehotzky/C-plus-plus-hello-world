@@ -15,6 +15,26 @@ namespace HelloWorld
 
         static void Main(string[] args)
         {
+            // int[5] tells us there will be 5 items in the array
+            int[] intArray = new int[5]; 
+            string[] strArray = new string[5];
+
+            // storing items in the arrays
+            int[] populatedIntArray = new int[] { 0, 1, 2, 3, 4, 5 };
+            string[] populatedStrArray = new string[] { "One", "Two", "Three" };
+
+            intArray[0] = 5;
+            intArray[2] = 15;
+
+            int firstVal = intArray[0];
+
+            // initializing two arrays with three items each
+            int[,] multiInt = new int[2, 3];
+            int[,] multiPopulatedInt = { { 1, 2, 3 }, { 5, 6, 7 } };
+
+            int firstMultiVal = multiPopulatedInt[0, 0];
+            int secondMultiVal = multiPopulatedInt[1, 2];
+
             PetStruct dog = new PetStruct();
             dog.Type = PetType.Dog;
             dog.HasFur = true;
