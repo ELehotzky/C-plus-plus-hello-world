@@ -16,7 +16,7 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             // int[5] tells us there will be 5 items in the array
-            int[] intArray = new int[5]; 
+            int[] intArray = new int[5];
             string[] strArray = new string[5];
 
             // storing items in the arrays
@@ -34,6 +34,26 @@ namespace HelloWorld
 
             int firstMultiVal = multiPopulatedInt[0, 0];
             int secondMultiVal = multiPopulatedInt[1, 2];
+
+            // lists don't need to have the number of items declared
+            List<string> listOfStrings = new List<string>();
+            listOfStrings.Add("First String");
+            listOfStrings.Insert(0, "Inserted String");
+
+            listOfStrings.Remove("First String");
+            listOfStrings.RemoveAt(0);
+
+            listOfStrings.Sort();
+
+            var theFirstStrIs = listOfStrings[0];
+
+            Dictionary<string, string> names = new Dictionary<string, string>();
+            names.Add("James", "Bond");
+            names.Add("Money", "Penny");
+
+            Console.WriteLine("The name is " + names["James"]);
+
+            names.Remove("James");
 
             PetStruct dog = new PetStruct();
             dog.Type = PetType.Dog;
@@ -73,7 +93,7 @@ namespace HelloWorld
 
         enum PetType
         {
-            Dog, 
+            Dog,
             Duck
         }
     }
