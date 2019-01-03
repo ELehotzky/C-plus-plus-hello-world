@@ -72,6 +72,16 @@ namespace HelloWorld
             Console.WriteLine("a " + dog.Type + " has " + dog.Legs + " legs");
             Console.WriteLine("a " + duck.Type + " has " + duck.Legs + " legs");
 
+            List<PetClass> pets = new List<PetClass>();
+            pets.Add(new PetClass { HasFur = false, Legs = 2, Name = "Donald", Type = PetType.Duck });
+            pets.Add(new PetClass { HasFur = true, Legs = 4, Name = "Pluto", Type = PetType.Dog });
+
+            List<PetClass> results = (from p in pets
+                                     where p.Type == PetType.Dog
+                                     select p).ToList();
+
+            results = pets.Where(p => p.Type == PetType.Dog).ToList();
+
             Console.ReadLine();
         }
 
